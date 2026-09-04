@@ -1,10 +1,10 @@
-# react-dev-week1-Activity# react-dev-week1-Activity
+# react-dev-week1-Activity
 
-**Instructions:**
+## Instructions
 
 This exercise will guide you through converting a simple JavaScript project to TypeScript and setting up Webpack to bundle your code.
 
-**Project Setup:**
+## Project Setup
 
 ```
 my-project/
@@ -13,9 +13,9 @@ my-project/
     └── main.js
 ```
 
-**Files:**
+## Files
 
-*   **`index.html`:**
+### `index.html`
 
 ```html
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ my-project/
 </html>
 ```
 
-*   **`src/main.js`:**
+### `src/main.js`
 
 ```javascript
 // --- Starter JavaScript Code ---
@@ -72,7 +72,7 @@ displayBook(book2);
 // Task 5: Add type annotations to the new variables and functions that you created in prior steps.
 ```
 
-**Part 1: Convert to TypeScript**
+## Part 1: Convert to TypeScript
 
 1.  **Rename `main.js` to `main.ts`:** Change the file extension to `.ts` to indicate that it's a TypeScript file.
 
@@ -93,7 +93,7 @@ displayBook(book2);
     *   Add type annotations to the parameters and return type of `addReview` and any other variables you introduce.
 
 
-**Part 2: Set up TypeScript Configuration**
+## Part 2: Set up TypeScript Configuration
 
 1.  **Initialize npm Project:**
     *   Open your terminal and navigate to your project directory (`my-project`).
@@ -110,22 +110,22 @@ displayBook(book2);
 ```json
 {
   "compilerOptions": {
-    "target": "es5",       // Specify ECMAScript target version (e.g., ES5, ES6, etc.)
-    "module": "commonjs", // Specify module code generation
-    "outDir": "./dist",   // Redirect output structure to the directory
-    "rootDir": "./src",   // Specify the root directory of input files
-    "strict": true,       // Enable all strict type-checking options
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"  // Specify module resolution strategy
+    "moduleResolution": "node"
   },
-  "include": ["src/**/*"],  // Files to include in the compilation
-  "exclude": ["node_modules"] // Files to exclude from the compilation
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
 ```
 
-**Part 3: Set up Webpack**
+## Part 3: Set up Webpack
 
 1.  **Install Webpack and Related Packages:**
     *   Run `npm install --save-dev webpack webpack-cli ts-loader` to install Webpack, the Webpack CLI, and `ts-loader` (which allows Webpack to handle `.ts` files).
@@ -160,7 +160,7 @@ module.exports = {
 };
 ```
 
-**Part 4: Update `package.json`**
+## Part 4: Update `package.json`
 
 1.  **Add a Build Script:**
     *   Open your `package.json` file and add a `build` script to the `scripts` section:
@@ -171,7 +171,7 @@ module.exports = {
 }
 ```
 
-**Part 5: Build and Run**
+## Part 5: Build and Run
 
 1.  **Build the Project:**
     *   In your terminal, run `npm run build`. This will use Webpack to bundle your TypeScript code (transpiled to JavaScript) into `dist/bundle.js`.
@@ -186,7 +186,7 @@ module.exports = {
 3.  **Run in Browser:**
     *   Open `index.html` in your browser. You should see the output from your TypeScript code (the book list).
 
-**Explanation:**
+## Explanation
 
 *   **`webpack.config.js`:**
     *   **`entry`:** Specifies the entry point of your application (your main TypeScript file).
