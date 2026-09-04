@@ -2,10 +2,12 @@ const path = require('path');
 
 module.exports = {
   entry: './src/main.ts',
+
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+
   module: {
     rules: [
       {
@@ -15,9 +17,19 @@ module.exports = {
       },
     ],
   },
+
   resolve: {
     extensions: ['.ts', '.js'],
   },
+
   mode: 'development',
-  devtool: 'inline-source-map'
+
+  devtool: 'inline-source-map',
+
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname),
+    },
+    port: 8080,
+  },
 };

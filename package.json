@@ -1,11 +1,13 @@
 {
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack serve --mode development"
   },
   "devDependencies": {
     "ts-loader": "^9.6.2",
     "typescript": "^6.0.2",
     "webpack": "^5.110.3",
-    "webpack-cli": "^7.2.3"
+    "webpack-cli": "^7.2.3",
+    "webpack-dev-server": "^5.2.6"
   }
 }
